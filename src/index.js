@@ -28,6 +28,10 @@ let cityName = document.querySelector('.current-city');
 
   let windData = document.querySelector('#current-wind');
   windData.innerHTML = `${response.data.wind.speed} km/h`;
+  
+  let descriptionData = document.querySelector('.current-description');
+  descriptionData.innerHTML = `${response.data.condition.description}`;
+  
 
   let iconData = document.querySelector('.current-temperature-icon');
   let iconCode = response.data.condition.icon;
