@@ -79,6 +79,8 @@ body {
     top: -8px;
     font-size: 40px;
     margin-right: 10px;
+    margin-top: 12px;
+    background-color: tan;
   }
   
   span.current-temp {
@@ -111,4 +113,6 @@ body {
   strong {
     color: #f65282;
   }
+
+  
   
