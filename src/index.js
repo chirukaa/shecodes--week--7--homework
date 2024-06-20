@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', () => getWeather('Paris'));
+document.addEventListener('DOMContentLoaded', () => getWeather());
 
 let search = document.querySelector('.search-button');
-search.addEventListener('click', getWeather);
+search.addEventListener('click', () => getWeather());
 
-function getWeather(defaultCity = null) {
+function getWeather() {
   event.preventDefault();
-let apiKey = '5c5bc441t00fef7ob43bb1b47ef1faa0';
-let city = defaultCity || document.querySelector('.search-input').value;
-let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
-axios.get(url).then(displayTemperature);
+  let apiKey = '5c5bc441t00fef7ob43bb1b47ef1faa0';
+  let city = document.querySelector('.search-input').value || 'Paris';
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`
+  axios.get(url).then(displayTemperature);
 }
 
 
